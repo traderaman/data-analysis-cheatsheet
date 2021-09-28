@@ -57,3 +57,32 @@ new_index = 'CA NY WY OR CO'.split()
 print(new_index)
 frame['States'] = new_index             #to make new column 'States' ith new index
 print(frame)
+
+####### MATPLOTLIB #######
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+x = np.arange(0,11)
+y = x ** 2
+
+plt.plot(x,y)          #to plot x and y
+#
+plt.xlabel('X label')     #to label X axis
+plt.ylabel('Y label')     #to label Y axis
+plt.title('TITLE')       #to add a title to the plot
+plt.show()               #to show the graph of plot
+
+# TO PLOT MORE THAN ONE PLOT ON SAME WINDOW
+plt.subplot(1,2,1)        # here '1' = no. of row, '2' = no. of column, '1' is plot number
+plt.plot(x,y,'r')         # here 'r' is colour of line plot i.e. red  
+plt.subplot(1,2,2)
+plt.plot(y,x,'b')         # instead of 'b' we can use "color = '#FF8C00'" OR "color = 'blue'"
+plt.show()
+
+# TO ADD LEGEND
+plt.plot(x,y)          
+plt.plot(x,y,label= 'legend')
+plt.legend()
+plt.show()
+
