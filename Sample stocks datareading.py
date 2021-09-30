@@ -36,6 +36,7 @@ plt.show()
 
 gm['MA 50'] = gm['Close'].rolling(50).mean()               #to add 50 MA to chart
 gm['MA 200'] = gm['Close'].rolling(200).mean()
+gm['EMA 21'] = gm['Close'].ewm(21).mean()                  #to add 21 EMA to chart
 gm[['Close','MA 50','MA 200']].plot(figsize= (16,8))
 plt.legend()
 plt.show()
